@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Source Code Pro';
+  src: local('Source Code Pro'), url(./assets/fonts/Codec-Pro-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Code Pro Extra Bold';
+  src: local('Source Code Pro Extra Bold'), url(./assets/fonts/Codec-Pro-Extrabold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Code Pro Light';
+  src: local('Source Code Pro Light'), url(./assets/fonts/Codec-Pro-Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Code Pro News';
+  src: local('Source Code Pro News'), url(./assets/fonts/Codec-Pro-News.ttf) format('truetype');
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap'); */
+
+body {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  margin:0px;
+  padding:0px;
+  font-style: normal;  
+  
+}
+*{
+  text-rendering: optimizeLegibility;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
