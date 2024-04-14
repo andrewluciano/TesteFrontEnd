@@ -32,19 +32,35 @@ export const PaginaFormulario = () => {
   };
   const validateForm = (e) => {
     setstateForm(false);
-    console.log(e.target[0]);
-    console.log(fieldsValidade);
+
+    console.log(fieldsValidade[0]);
   };
 
   const ActionValidateField = (e) => {
     const field = e.target;
 
+    console.log(field.name);
     // const isEmpty = !e.target.target.trim().length;
     // alert(isEmpty);
-    if (field.value !== "") {
-      fieldsValidade[0][field.name] = true;
-    } else {
-      fieldsValidade[0][field.name] = false;
+
+    if (field.name === "email") {
+      field.value
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        ) === null
+        ? (fieldsValidade[0][field.name] = false)
+        : (fieldsValidade[0][field.name] = true);
+    }
+    if (field.name === "name") {
+      field.value !== ""
+        ? (fieldsValidade[0][field.name] = true)
+        : (fieldsValidade[0][field.name] = false);
+    }
+    if (field.name === "password") {
+      field.value !== ""
+        ? (fieldsValidade[0][field.name] = true)
+        : (fieldsValidade[0][field.name] = false);
     }
   };
 
@@ -74,14 +90,15 @@ export const PaginaFormulario = () => {
           <Inputs
             state={stateForm}
             type="email"
-            name="teste de envio"
+            name="email"
             label="Email"
+            onBlur={(e) => ActionValidateField(e)}
             placeholder="Please type in..."
           />
           <Inputs
             state={stateForm}
             type="mobile"
-            name="teste de envio"
+            name="mobile"
             label="Mobile"
             placeholder="Please type in..."
             required
@@ -90,9 +107,10 @@ export const PaginaFormulario = () => {
             state={stateForm}
             type="password"
             id="password"
-            name="teste de envio"
+            name="password"
             label="Password"
             placeholder="Please type in..."
+            onBlur={(e) => ActionValidateField(e)}
             required
           />
           <Inputs

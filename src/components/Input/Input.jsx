@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 import { Container, Label, Input, StyledCheckbox, ShowPass } from "./styles";
+import InputMask from "react-input-mask";
 
 import json from "src/country";
 import SelectCuston from "./select";
+
+import maskList from "src/helpers/format/maskMobile/maskList";
 
 export const Inputs = (props) => {
   const validatePhone = (value) => {
@@ -15,7 +18,6 @@ export const Inputs = (props) => {
   };
   const [checked, setChecked] = useState(false);
   const [reveal, setReveal] = useState(false);
-  const ddi = [];
 
   const RevealPass = (e) => {
     document.getElementById("password").type === "password"
@@ -23,6 +25,15 @@ export const Inputs = (props) => {
       : (document.getElementById("password").type = "password");
 
     setReveal(!reveal);
+  };
+
+  const [CoutrySelected, setCoutrySelected] = useState("+44");
+  const [MaskSelectedCountry, setMaskSelectedCountry] =
+    useState("99 9999 9999");
+  const modifyCountryMobile = (e) => {
+    setCoutrySelected(e.label);
+    const Ele = maskList.filter((res) => res.code === e.label);
+    setMaskSelectedCountry(Ele[0].mask);
   };
 
   return (
@@ -49,16 +60,24 @@ export const Inputs = (props) => {
       {["mobile"].includes(props.type) && (
         <Container state={props.state}>
           <Label>{props.label}</Label>
+          <SelectCuston json={json} change={(e) => modifyCountryMobile(e)} />
 
-          <SelectCuston json={json} />
-          <Input
-            type={props.type}
-            name={props.name}
-            placeholder={props.placeholder}
-            onKeyDown={validatePhone(this)}
-            onKeyUp="((?:(?2-9)?\D{0,3})(?:(?2-9)?\D{0,3})\d{4})"
-            {...props}
-          />
+          <InputMask
+            mask={MaskSelectedCountry}
+            value={props.value}
+            onChange={props.onChange}
+          >
+            {(inputProps) => (
+              <Input
+                type={props.type}
+                name={props.name}
+                placeholder={props.placeholder}
+                style={{ paddingTop: "5px" }}
+                onBlur={validatePhone(this)}
+                {...props}
+              />
+            )}
+          </InputMask>
         </Container>
       )}
       {["checkbox"].includes(props.type) && (

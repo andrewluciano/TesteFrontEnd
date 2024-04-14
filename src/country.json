@@ -48,13 +48,7 @@
        "label":"+1",
        "continente":"Am\u00e9rica Central"
     },
-    {
-       "pais":"Ant\u00edgua e Barbuda",
-       "img":"https:\\upload.wikimedia.org\/wikipedia\/commons\/thumb\/8\/89\/Flag_of_Antigua_and_Barbuda.svg\/23px-Flag_of_Antigua_and_Barbuda.svg.png",
-       "value":1,
-       "label":"+1",
-       "continente":"Am\u00e9rica Central"
-    },
+    
     {
        "pais":"Antilhas Holandesas",
        "img":"https:\\upload.wikimedia.org\/wikipedia\/commons\/thumb\/a\/ae\/Flag_of_the_Netherlands_Antilles_%281986%E2%80%932010%29.svg\/23px-Flag_of_the_Netherlands_Antilles_%281986%E2%80%932010%29.svg.png",
@@ -125,13 +119,7 @@
        "label":"+994",
        "continente":"\u00c1sia"
     },
-    {
-       "pais":"Bahamas",
-       "img":"https:\\upload.wikimedia.org\/wikipedia\/commons\/thumb\/7\/77\/Bahamas_Flag.svg\/23px-Bahamas_Flag.svg.png",
-       "value":1,
-       "label":"+1",
-       "continente":"Am\u00e9rica Central"
-    },
+    
     {
        "pais":"Bangladesh",
        "img":"https:\\upload.wikimedia.org\/wikipedia\/commons\/thumb\/f\/f9\/Flag_of_Bangladesh.svg\/23px-Flag_of_Bangladesh.svg.png",
@@ -139,13 +127,7 @@
        "label":"+880",
        "continente":"\u00c1sia"
     },
-    {
-       "pais":"Barbados",
-       "img":"https:\\upload.wikimedia.org\/wikipedia\/commons\/thumb\/e\/ef\/Flag_of_Barbados.svg\/23px-Flag_of_Barbados.svg.png",
-       "value":1,
-       "label":"+1",
-       "continente":"Am\u00e9rica Central"
-    },
+    
     {
        "pais":"Bahrein",
        "img":"https:\\upload.wikimedia.org\/wikipedia\/commons\/thumb\/2\/2c\/Flag_of_Bahrain.svg\/23px-Flag_of_Bahrain.svg.png",

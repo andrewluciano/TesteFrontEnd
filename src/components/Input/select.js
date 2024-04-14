@@ -8,11 +8,10 @@ const SelectCuston = (props) => {
     "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/175px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
   );
   let CountrySelected = [0];
-  console.log(CountrySelected);
-
   const SelectCountry = (e) => {
     CountrySelected = props.json.filter((res) => res.value === e.value);
     setCountrySelectedImg(CountrySelected[0].img);
+    props.change(e);
   };
 
   const DropdownIndicator = (props) => {

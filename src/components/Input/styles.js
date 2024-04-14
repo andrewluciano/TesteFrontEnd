@@ -10,9 +10,37 @@ export const AreaCustonSelect = styled("div", {
   justifyContent: "center",
   zIndex: "9999",
   fontFamily: "Source Code Pro News",
-  fontSize: "1rem",
-
+  fontSize: "0.8rem",
   height: "20px",
+
+  ".CountryMobile__input-container": {
+    outline: "none",
+    "&:focus-visible": {
+      outline: "none",
+      border: "none",
+    },
+    "*:focus-visible": {
+      outline: "none",
+      border: "none",
+    },
+    "*": {
+      outline: "none",
+      border: "none",
+    },
+    input: {
+      "&:focus-visible": {
+        outline: "none",
+        border: "none",
+      },
+      "*:focus-visible": {
+        outline: "none",
+        border: "none",
+      },
+
+      outline: "none",
+      border: "none",
+    },
+  },
   img: {
     borderRadius: "100%",
     width: "20px",
@@ -22,6 +50,10 @@ export const AreaCustonSelect = styled("div", {
     // height: "20px",
     marginRight: "5px",
   },
+  ".CountryMobile__menu": {
+    width: "100px",
+    fontSize: "0.6rem",
+  },
   ".CountryMobile__control": {
     position: "relative",
     top: "-1px",
@@ -30,6 +62,7 @@ export const AreaCustonSelect = styled("div", {
     border: "0",
     borderRadius: "0",
     margin: "0px 10px 0px 0px",
+    boxShadow: "0 0 0 transparent",
     "@lg2": {
       backgroundColor: "transparent",
     },
@@ -43,6 +76,7 @@ export const AreaCustonSelect = styled("div", {
     padding: "0px",
     border: "0",
     width: "50px",
+    fontSize: "1rem",
   },
   ".CountryMobile__indicator": {
     padding: "0px",
