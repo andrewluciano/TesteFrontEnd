@@ -2,10 +2,11 @@ import React, { useState } from "react";
 
 import { ReactComponent as IconSelect } from "src/assets/images/icons/icon-select.svg";
 import Select, { components } from "react-select";
-import { AreaCustonSelect, Option, SelectedItem, ListOption } from "./styles";
+import { AreaCustonSelect } from "./styles";
 const SelectCuston = (props) => {
-  console.log("dados", props);
-  const [CountrySelectedImg, setCountrySelectedImg] = useState();
+  const [CountrySelectedImg, setCountrySelectedImg] = useState(
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/175px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
+  );
   let CountrySelected = [0];
   console.log(CountrySelected);
 
@@ -31,6 +32,7 @@ const SelectCuston = (props) => {
         classNamePrefix="CountryMobile"
         onChange={(e) => SelectCountry(e)}
         options={props.json}
+        defaultValue={{ label: "+44", value: 0 }}
         components={{ DropdownIndicator }}
         placeHolder="a"
         arrowRenderer={IconSelect}

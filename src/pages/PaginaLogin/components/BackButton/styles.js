@@ -13,9 +13,9 @@ export const Container = styled("a", {
   textIndent: "-9000px",
   marginBottom: "20px",
   "@lg2": {
-    top: "-5px",
+    top: "-3px",
     width: "24px",
     height: "24px",
-    backgroundSize: "5px",
+    backgroundSize: "7.5px",
   },
 });

@@ -17,6 +17,7 @@ export const AreaTitle = styled("div", {
     justifyContent: "top",
     alignItems: "top",
     alignContent: "top",
+    padding: "34px 25px 20px 25px",
   },
 });
 export const AreaTitleText = styled("div", {
@@ -55,8 +56,18 @@ export const SubTitleForm = styled("h4", {
 export const AreaForm = styled("form", {
   display: "flex",
   flexDirection: "column",
-  gap: "21px",
-  margin: "51px 0px",
+  margin: "51px 0px 0 0 ",
+  boxSizing: "border-box",
+  "@lg2": {
+    margin: "0",
+  },
+});
+export const AreaInputs = styled("form", {
+  display: "flex",
+  flexDirection: "column",
+  "@lg2": {
+    padding: "15px 25px 0px 25px",
+  },
 });
 
 export const ButtonAreas = styled("div", {
@@ -64,6 +75,7 @@ export const ButtonAreas = styled("div", {
   flexDirection: "row",
   gap: "20px",
   margin: "0px 0px",
+  padding: "40px 0px 0px 0px",
 
   "@lg2": {
     backgroundColor: "#fff",

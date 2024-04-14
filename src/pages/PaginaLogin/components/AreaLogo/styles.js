@@ -7,7 +7,8 @@ export const Container = styled("div", {
   flexDirection: "row",
   alignItems: "center",
   fontSize: "2rem",
-  marginBottom: "59px",
+  marginBottom: "55px",
+
   svg: {
     display: "block",
     width: "135px",

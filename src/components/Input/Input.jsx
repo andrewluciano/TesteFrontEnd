@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import { Container, Label, Input, StyledCheckbox, ShowPass } from "./styles";
-import country from "./country";
 
 import json from "src/country";
 import SelectCuston from "./select";
@@ -38,7 +37,6 @@ export const Inputs = (props) => {
             placeholder={props.placeholder}
             id={props.id}
             required
-            oninvalid="this.setCustomValidity('Campo requerido')"
             {...props}
           />
 

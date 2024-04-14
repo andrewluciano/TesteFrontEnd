@@ -15,9 +15,10 @@ export const Container = styled("div", {
   justifyContent: "center",
   boxSizing: "border-box",
   flexWrap: "wrap",
+
   fontSize: "$psmall",
   right: "0px",
-
+  "@lg2": { top: "20px" },
   "*": {
     boxSizing: "border-box",
   },

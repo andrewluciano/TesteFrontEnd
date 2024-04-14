@@ -20,9 +20,11 @@
 body {
   font-family: "Source Code Pro", monospace;
   font-optical-sizing: auto;
+  height:100%;
   margin:0px;
   padding:0px;
   font-style: normal;  
+  border:   1px solid blue
   
 }
 *{

@@ -16,6 +16,9 @@ export const BtnButton = styled("button", {
   color: "#000",
   border: "1px solid #121212",
   transition: "all 0.2s ease-in-out",
+  "@lg2": {
+    justifyContent: "center",
+  },
   variants: {
     type: {
       submit: {

@@ -20,7 +20,7 @@ export const AreaCustonSelect = styled("div", {
     // padding: "5px",
     boxSizing: "border-box",
     // height: "20px",
-    marginRight: "10px",
+    marginRight: "5px",
   },
   ".CountryMobile__control": {
     position: "relative",
@@ -68,19 +68,30 @@ export const Container = styled("div", {
   borderRadius: "50px",
   border: "1px solid #777777",
   height: "50px",
+  margin: "10.5px 0",
+  "&.NoValidate": {
+    color: "$Warning",
+    borderColor: "$Warning",
+  },
   variants: {
     state: {
       true: {},
       false: {
         color: "$Warning",
+        borderColor: "$Warning",
       },
     },
     type: {
       checkbox: {
         border: "0",
+        alignItems: "center",
         display: "flex",
         gap: "16px",
+        borderRadius: "0",
         padding: "0",
+        margin: "24px 0px 13px 0px",
+        height: "auto",
+        padding: "0px",
       },
     },
   },
@@ -104,8 +115,9 @@ export const Label = styled("label", {
       checkbox: {
         fontFamily: "Source Code Pro News",
         zIndex: "0",
+        height: "auto",
         position: "relative",
-        top: "2px",
+        top: "initial",
         left: "initial",
       },
     },
@@ -130,7 +142,6 @@ export const StyledCheckbox = styled("a", {
   display: "block",
   minWidth: "24px",
   height: "24px",
-
   zIndex: "9",
   borderRadius: "4px",
   border: "1px solid #777777",
