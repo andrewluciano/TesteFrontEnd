@@ -1,4 +1,5 @@
 import { styled } from "src/stitches.config";
+import IconCongrats from "src/assets/images/icons/icon-congrats.svg";
 
 export const Container = styled("div", {
   display: "flex",
@@ -6,8 +7,19 @@ export const Container = styled("div", {
   fontSize: "2rem",
   textAlign: "left",
   maxWidth: "550px",
+  width: "100%",
+  height: "100vh",
+  backgroundColor: "#fff",
+  position: "absolute",
+  top: "0px",
+  padding: "50px 0px 0px 0px",
+  zIndex: "9999",
+  ".AreaLogo": {
+    div: {
+      display: "none",
+    },
+  },
 });
-
 export const AreaTitle = styled("div", {
   display: "flex",
   flexDirection: "column",
@@ -54,34 +66,18 @@ export const SubTitleForm = styled("h4", {
   },
 });
 
-export const AreaForm = styled("form", {
-  display: "flex",
-  flexDirection: "column",
-  margin: "51px 0px 0 0 ",
+export const Sucessfully = styled("div", {
+  fontFamily: "Source Code Pro Extra Bold",
+  fontSize: "1.5rem",
+  backgroundColor: "$LightYellow",
+  backgroundImage: `url(${IconCongrats})`,
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "67px center",
+  backgroundSize: "75px",
   boxSizing: "border-box",
-  "@lg2": {
-    margin: "0",
-  },
-});
-export const AreaInputs = styled("form", {
-  display: "flex",
-  flexDirection: "column",
-  "@lg2": {
-    padding: "15px 25px 0px 25px",
-  },
-});
-
-export const ButtonAreas = styled("div", {
-  display: "flex",
-  flexDirection: "row",
-  gap: "20px",
-  margin: "0px 0px",
-  padding: "40px 0px 0px 0px",
-
-  "@lg2": {
-    backgroundColor: "#fff",
-    borderTop: "1px solid #D6D7DD",
-    padding: "20px 25px",
-    flexDirection: "column",
-  },
+  padding: "76px 67px 76px 169px",
+  boxShadow: "0px 25px 25px rgba(0,0,0,0.25)",
+  borderRadius: "30px",
+  maxWidth: "383px",
+  marginTop: "60px",
 });

@@ -6,8 +6,7 @@ export const Container = styled("div", {
   display: "flex",
   flexDirection: "row",
   fontSize: "2rem",
-  height: "100%",
-  border: "1px solid red",
+  height: "100vh",
 });
 
 export const AreaBg = styled("div", {
@@ -22,14 +21,11 @@ export const AreaBg = styled("div", {
 });
 
 export const AreaForm = styled("div", {
-  width: "50vw",
-  maxWidth: "550px",
-  border: "1px solid red",
   height: "100%",
-
   backgroundColor: "$white",
-  boxSizing: " ",
-  padding: "50px 91px",
+  boxSizing: "border-box",
+  padding: "50px 91px 0px 91px",
+
   "@lg2": {
     backgroundColor: "$white",
     width: "100vw",

@@ -39,7 +39,7 @@ export const Inputs = (props) => {
   return (
     <>
       {["text", "email", "password"].includes(props.type) && (
-        <Container state={props.state}>
+        <Container state={props.state} id={props.name}>
           <Label>{props.label}</Label>
 
           <Input
@@ -58,7 +58,7 @@ export const Inputs = (props) => {
       )}
 
       {["mobile"].includes(props.type) && (
-        <Container state={props.state}>
+        <Container state={props.state} id={props.name}>
           <Label>{props.label}</Label>
           <SelectCuston json={json} change={(e) => modifyCountryMobile(e)} />
 
@@ -81,7 +81,7 @@ export const Inputs = (props) => {
         </Container>
       )}
       {["checkbox"].includes(props.type) && (
-        <Container state={props.state} type={props.type}>
+        <Container state={props.state} type={props.type} id={props.name}>
           <StyledCheckbox checked={checked}>
             <input
               type="checkbox"

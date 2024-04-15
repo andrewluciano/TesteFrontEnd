@@ -15,6 +15,9 @@ import AreaLogo from "../components/AreaLogo";
 import BackButton from "../components/BackButton";
 import MessageSecured from "../components/MessageSecured";
 
+// Modal
+import PaginaOk from "./PaginaOk";
+
 export const PaginaFormulario = () => {
   const [stateForm, setstateForm] = useState(true);
   const [formDisabled, setFormDisabled] = useState(true);
@@ -22,7 +25,7 @@ export const PaginaFormulario = () => {
   const fieldsValidade = [
     { name: false, email: false, mobile: false, password: false, terms: false },
   ];
-
+  const [ModalOk, setModalOk] = useState(false);
   const TermsReturn = (e) => {
     console.log(e.target.checked);
     setFormDisabled(!e.target.checked);
@@ -31,9 +34,10 @@ export const PaginaFormulario = () => {
     console.log(fieldsValidade);
   };
   const validateForm = (e) => {
-    setstateForm(false);
+    // setstateForm(false);
 
     console.log(fieldsValidade[0]);
+    setModalOk(true);
   };
 
   const ActionValidateField = (e) => {
@@ -44,23 +48,37 @@ export const PaginaFormulario = () => {
     // alert(isEmpty);
 
     if (field.name === "email") {
-      field.value
-        .toLowerCase()
-        .match(
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-        ) === null
-        ? (fieldsValidade[0][field.name] = false)
-        : (fieldsValidade[0][field.name] = true);
+      if (
+        field.value
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+          ) === null
+      ) {
+        fieldsValidade[0][field.name] = false;
+        document.getElementById(field.name).classList.add("NoValidate");
+      } else {
+        fieldsValidade[0][field.name] = true;
+        document.getElementById(field.name).classList.remove("NoValidate");
+      }
     }
     if (field.name === "name") {
-      field.value !== ""
-        ? (fieldsValidade[0][field.name] = true)
-        : (fieldsValidade[0][field.name] = false);
+      if (field.value !== "") {
+        fieldsValidade[0][field.name] = true;
+        document.getElementById(field.name).classList.remove("NoValidate");
+      } else {
+        fieldsValidade[0][field.name] = false;
+        document.getElementById(field.name).classList.add("NoValidate");
+      }
     }
     if (field.name === "password") {
-      field.value !== ""
-        ? (fieldsValidade[0][field.name] = true)
-        : (fieldsValidade[0][field.name] = false);
+      if (field.value !== "") {
+        fieldsValidade[0][field.name] = true;
+        document.getElementById(field.name).classList.remove("NoValidate");
+      } else {
+        fieldsValidade[0][field.name] = false;
+        document.getElementById(field.name).classList.add("NoValidate");
+      }
     }
   };
 
@@ -128,6 +146,8 @@ export const PaginaFormulario = () => {
           <Button value="Save" type="submit" disabled={formDisabled} />
           <Button value="Got a VerifyMyAge account? Sign in" type="default" />
         </ButtonAreas>
+
+        {ModalOk && <PaginaOk />}
       </AreaForm>
     </Container>
   );

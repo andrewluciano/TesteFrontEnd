@@ -6,7 +6,7 @@ import Steps from "../Steps";
 
 export const AreaLogo = () => {
   return (
-    <Container>
+    <Container className="AreaLogo">
       <ImagemLogo width={"135px"} />
       <Steps nSteps={5} steps={1} />
     </Container>
