@@ -139,7 +139,10 @@ export const Label = styled("label", {
   backgroundColor: "#fff",
   padding: "4px 5px",
   height: "16px",
-
+  a: {
+    color: "$darkGray",
+    "&:hover": {},
+  },
   boxSizing: "border-box",
   "@lg2": {
     backgroundColor: "$whiteSmoke",

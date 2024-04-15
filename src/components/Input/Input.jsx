@@ -97,7 +97,10 @@ export const Inputs = (props) => {
               {...props}
             />
           </StyledCheckbox>
-          <Label type={props.type}>{props.label}</Label>
+          <Label type={props.type}>
+            Tick this box to confirm you’ve read and agreed to our{" "}
+            <a href="">Terms</a> and <a href="">Privacy Policy</a>.
+          </Label>
         </Container>
       )}
     </>
