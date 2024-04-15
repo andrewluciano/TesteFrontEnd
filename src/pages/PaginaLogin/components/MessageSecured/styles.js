@@ -15,7 +15,7 @@ export const Container = styled("div", {
     color: "#B9B9B9",
     fontFamily: "Source Code Pro News",
     fontSize: "0.635625rem",
-    margin: "0px auto 12px auto",
+    margin: "23px auto 12px auto",
     gap: "7px",
 
     p: {

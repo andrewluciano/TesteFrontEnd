@@ -58,6 +58,6 @@ export const Circle = styled("div", {
   position: " absolute",
   top: "0px",
   left: "0px",
-  rotate: "75deg",
-  clip: " rect(0px, 20px, 20px, 0px)",
+  rotate: "90deg",
+  clip: " rect(0px, 25px, 25px, 0px)",
 });

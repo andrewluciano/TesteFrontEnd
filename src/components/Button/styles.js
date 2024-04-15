@@ -1,6 +1,7 @@
 import { styled } from "src/stitches.config";
 
 export const BtnButton = styled("button", {
+  display: "flex",
   fontFamily: "Source Code Pro Light",
   minwidth: "auto",
   fontSize: "0.875rem",
@@ -18,6 +19,8 @@ export const BtnButton = styled("button", {
   transition: "all 0.2s ease-in-out",
   "@lg2": {
     justifyContent: "center",
+    alignItems: "center",
+    height: "45px",
   },
   variants: {
     type: {

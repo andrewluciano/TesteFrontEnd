@@ -7,8 +7,12 @@ import {
   SubTitleForm,
   AreaTitleText,
   Sucessfully,
+  MessageDisclaimer,
+  AreaLogo,
 } from "./styles";
-import AreaLogo from "../../components/AreaLogo";
+
+import MessageSecured from "../../components/MessageSecured";
+// import { ReactComponent as ImagemLogo } from "src/assets/images/logo.svg";
 
 export const PaginaFormulario = () => {
   return (
@@ -18,9 +22,8 @@ export const PaginaFormulario = () => {
         <AreaTitleText>
           <TitleForm>Congrats</TitleForm>
           <SubTitleForm>
-            You'll be automatically verified for all future orders.
-            <br />
-            Your orders will be dispatched without delay.
+            You'll be automatically verified for all future orders. Your orders
+            will be dispatched without delay.
           </SubTitleForm>
         </AreaTitleText>
       </AreaTitle>
@@ -31,6 +34,11 @@ export const PaginaFormulario = () => {
         <br />
         verified!
       </Sucessfully>
+      <MessageDisclaimer>
+        You'll be automatically verified for all future orders. Your orders will
+        be dispatched without delay.
+      </MessageDisclaimer>
+      <MessageSecured />
     </Container>
   );
 };

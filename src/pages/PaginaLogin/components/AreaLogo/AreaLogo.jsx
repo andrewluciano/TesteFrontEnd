@@ -8,7 +8,7 @@ export const AreaLogo = () => {
   return (
     <Container className="AreaLogo">
       <ImagemLogo width={"135px"} />
-      <Steps nSteps={5} steps={1} />
+      <Steps nSteps={5} steps={5} />
     </Container>
   );
 };

@@ -14,7 +14,10 @@
   font-family: 'Source Code Pro News';
   src: local('Source Code Pro News'), url(./assets/fonts/Codec-Pro-News.ttf) format('truetype');
 }
-
+@font-face {
+  font-family: 'Source Code Pro Regular';
+  src: local('Source Code Pro Regular'), url(./assets/fonts/Codec-Pro-Regular.ttf) format('truetype');
+}
 /* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap'); */
 
 body {
@@ -24,7 +27,6 @@ body {
   margin:0px;
   padding:0px;
   font-style: normal;  
-  border:   1px solid blue
   
 }
 *{

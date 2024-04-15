@@ -153,6 +153,7 @@ export const Label = styled("label", {
         position: "relative",
         top: "initial",
         left: "initial",
+        padding: "0",
       },
     },
   },

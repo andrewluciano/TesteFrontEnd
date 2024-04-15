@@ -24,8 +24,7 @@ export const AreaForm = styled("div", {
   height: "100%",
   backgroundColor: "$white",
   boxSizing: "border-box",
-  padding: "50px 91px 0px 91px",
-
+  padding: "50px 89px 0px 89px",
   "@lg2": {
     backgroundColor: "$white",
     width: "100vw",

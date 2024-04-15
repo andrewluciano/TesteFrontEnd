@@ -5,7 +5,12 @@ export const Container = styled("div", {
   flexDirection: "column",
   fontSize: "2rem",
   textAlign: "left",
+  width: "500px",
   maxWidth: "550px",
+  "@lg2": {
+    width: "100%",
+    maxWidth: "100%",
+  },
 });
 
 export const AreaTitle = styled("div", {
@@ -19,6 +24,8 @@ export const AreaTitle = styled("div", {
     alignItems: "top",
     alignContent: "top",
     padding: "34px 25px 20px 25px",
+
+    backgroundColor: "$whiteSmoke",
   },
 });
 export const AreaTitleText = styled("div", {
@@ -61,6 +68,7 @@ export const AreaForm = styled("form", {
   boxSizing: "border-box",
   "@lg2": {
     margin: "0",
+    backgroundColor: "$whiteSmoke",
   },
 });
 export const AreaInputs = styled("form", {

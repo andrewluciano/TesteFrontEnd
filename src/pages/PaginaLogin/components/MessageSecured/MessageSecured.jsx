@@ -5,10 +5,10 @@ import LogoVerifymy from "src/assets/images/LogoVerifymy.svg";
 
 export const MessageSecured = () => {
   return (
-    <Container>
+    <Container className="AreaPageOk">
       <img className="PadLock" src={PadLock} height="10px" width="9px" />
       <p>Secured by</p>
-      <img src={LogoVerifymy} width="76px" height="18px" />
+      <img src={LogoVerifymy} width="76px" height="18.4px" />
     </Container>
   );
 };
