@@ -125,9 +125,9 @@ export const PaginaFormulario = () => {
           <AreaTitle>
             <BackButton />
             <AreaTitleText>
-              <TitleForm>Join VerifyMyAge</TitleForm>
+              <TitleForm>Entrar Empresa Genérica</TitleForm>
               <SubTitleForm>
-                Lets start by setting up your login details.
+              Vamos começar configurando seus dados de login.
               </SubTitleForm>
             </AreaTitleText>
           </AreaTitle>
@@ -137,8 +137,8 @@ export const PaginaFormulario = () => {
                 state={stateForm}
                 type="text"
                 name="name"
-                label="Full Name"
-                placeholder="Please type in..."
+                label="Nome Completo"
+                placeholder="Digite..."
                 required
                 onBlur={(e) => ActionValidateFieldName(e)}
               />
@@ -148,15 +148,15 @@ export const PaginaFormulario = () => {
                 name="email"
                 label="Email"
                 onBlur={(e) => ActionValidateFieldEmail(e)}
-                placeholder="Please type in..."
+                placeholder="Digite..."
               />
               <Inputs
                 state={stateForm}
                 type="mobile"
                 name="mobile"
                 blur={(e) => ActionValidateFieldMobile(e)}
-                label="Mobile"
-                placeholder="Please type in..."
+                label="Telefone"
+                placeholder="Telefone..."
                 required
               />
               <Inputs
@@ -164,8 +164,8 @@ export const PaginaFormulario = () => {
                 type="password"
                 id="password"
                 name="password"
-                label="Password"
-                placeholder="Please type in..."
+                label="Senha"
+                placeholder="Digite..."
                 onBlur={(e) => ActionValidateFieldPassword(e)}
                 required
               />
@@ -173,17 +173,17 @@ export const PaginaFormulario = () => {
                 state={stateForm}
                 type="checkbox"
                 name="teste de envio"
-                label="Tick this box to confirm you’ve read and agreed to our Terms and Privacy Policy."
-                placeholder="Please type in..."
+                label="Confirme que você leu e concordou com nossos Termos e Politica de Privacidade."
+                placeholder="Digite..."
                 onClick={(e) => TermsReturn(e)}
               />
               <MessageSecured />
             </AreaInputs>
 
             <ButtonAreas>
-              <Button value="Save" type="submit" disabled={formDisabled} />
+              <Button value="Cadastrar" type="submit" disabled={formDisabled} />
               <Button
-                value="Got a VerifyMyAge account? Sign in"
+                value="Tenho uma conta EG? Entrar"
                 type="default"
               />
             </ButtonAreas>

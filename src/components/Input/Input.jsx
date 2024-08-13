@@ -98,8 +98,8 @@ export const Inputs = (props) => {
             />
           </StyledCheckbox>
           <Label type={props.type}>
-            Tick this box to confirm you’ve read and agreed to our{" "}
-            <a href="">Terms</a> and <a href="">Privacy Policy</a>.
+          Confirme que você leu e concordou com nossos{" "}
+            <a href="javascript:void(0);">Termos</a> and <a href="javascript:void(0);">Politica</a>.
           </Label>
         </Container>
       )}

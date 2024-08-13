@@ -20,19 +20,17 @@ export const PaginaFormulario = () => {
       <AreaLogo />
       <AreaTitle>
         <AreaTitleText>
-          <TitleForm>Congrats</TitleForm>
+          <TitleForm>Parabéns</TitleForm>
           <SubTitleForm>
-            You'll be automatically verified for all future orders. Your orders
-            will be dispatched without delay.
+            
+Você será verificado automaticamente para todos os pedidos futuros.
           </SubTitleForm>
         </AreaTitleText>
       </AreaTitle>
       <Sucessfully>
-        You've been
+        Cadastrado com
         <br />
-        successfully
-        <br />
-        verified!
+        Sucesso        
       </Sucessfully>
       <MessageDisclaimer>
         You'll be automatically verified for all future orders. Your orders will

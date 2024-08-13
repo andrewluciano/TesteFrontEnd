@@ -11,8 +11,8 @@ export const Container = styled("div", {
 
   svg: {
     display: "block",
-    width: "135px",
-    height: "25px",
+    width: "160px",
+    height: "26px",
     "@lg2": {
       display: "none",
     },
